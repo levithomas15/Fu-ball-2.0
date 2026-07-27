@@ -381,7 +381,9 @@ let trailAcc = 0;
 
 function frame(now) {
   requestAnimationFrame(frame);
-  let dt = Math.min((now - last) / 1000, 0.05);
+  // rAF-Zeitstempel und performance.now() können auseinanderliegen – ohne
+  // untere Schranke wird dt im ersten Frame negativ und die Animation kippt.
+  const dt = Math.min(Math.max((now - last) / 1000, 0), 0.05);
   last = now;
 
   /* ---- Fußziel aus der Zeigerposition ---- */
