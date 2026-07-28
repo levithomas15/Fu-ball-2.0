@@ -6,7 +6,20 @@ durch den Ball und hau ihn nach oben.
 
 Läuft komplett offline — kein Download, kein Build, keine externen Server.
 
-## Starten
+## Spielen
+
+**➡️ [levithomas15.github.io/Fu-ball-2.0](https://levithomas15.github.io/Fu-ball-2.0/)**
+
+Läuft direkt im Browser, nichts zu installieren.
+
+> Damit die Seite live geht, muss GitHub Pages einmalig freigeschaltet werden:
+> **Settings → Pages → Source: „GitHub Actions“**. Danach veröffentlicht der
+> Workflow `.github/workflows/pages.yml` bei jedem Push automatisch.
+> (Alternativ **Source: „Deploy from a branch“** mit Branch
+> `claude/juggling-game-3d-dlm8gi` und Ordner `/ (root)` — dafür liegt eine
+> `.nojekyll`-Datei bereit.)
+
+## Lokal starten
 
 Das Spiel braucht einen kleinen lokalen Webserver (ES-Module lassen sich nicht
 per `file://` laden):
